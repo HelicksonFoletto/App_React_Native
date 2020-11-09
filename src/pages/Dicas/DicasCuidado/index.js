@@ -1,10 +1,13 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity} from 'react-native';
+import Icon  from 'react-native-vector-icons/FontAwesome';
 
-export default function DicasCuidado (){
+import styles from '../../../assets/Css';
+
+export default function DicasCuidado ({navigation}){
     return(
-        <View>
-            <Text>Teste</Text> 
+        <View style={styles.ContainerCadastro}>
+            <Text>Imagine um Cuidados aqui</Text> 
         </View>
     );
 }

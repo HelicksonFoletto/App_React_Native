@@ -34,6 +34,7 @@ export default function Routes (){
                 <Stack.Screen name = "DicasHome" component ={DicasHome}/>
                 <Stack.Screen name = "DicasCombate" component ={DicasCombate}/>
                 <Stack.Screen name = "DicasCriadouros" component ={DicasCriadouros}/>
+                <Stack.Screen name = "DicasCuidado" component ={DicasCuidado}/>
                 <Stack.Screen name = "DicasContrai" component ={DicasContrai}/>
                 <Stack.Screen name = "Config" component ={Config}/>
             </Stack.Navigator>

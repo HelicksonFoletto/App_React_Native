@@ -7,13 +7,21 @@ export default StyleSheet.create({
   containerLogin: {
     flex: 1,
     paddingHorizontal: '2%',
-    paddingTop: Constants.statusBarHeight + 10,
+    paddingTop: Constants.statusBarHeight ,
     backgroundColor: '#259F71'
   },
+  login__msg:(text='none')=>({
+    fontWeight: 'bold',
+    fontSize: 22,
+    color: 'red',
+    marginTop: 10,
+    marginBottom: 15,
+    display: text,
+  }),
   ButtonEsqueci:{
-    fontSize: 15,
+    fontSize: 17,
     color:'black',
-    paddingHorizontal: 40,
+    paddingHorizontal: '10%',
     marginBottom: '5%',
     left: '20%'
   },
@@ -22,8 +30,9 @@ export default StyleSheet.create({
     color:'black',
     paddingHorizontal: '10%',
     marginBottom: 50,
-    left: '10%',
-    top: '20%'
+    left: '15%',
+    top: '90%',
+    //backgroundColor: 'black'
   },
   logo_marca_home:{
     paddingTop: 30,
@@ -33,13 +42,14 @@ export default StyleSheet.create({
   },
   login_form:{
     width:"100%",
-    height: '75%'
+    height: '75%',
+    top: '10%'
   },
   login_input:{
     backgroundColor: "#fff",
     fontSize: 19,
     padding: '5%',
-    marginBottom: '5%',
+    marginBottom: '3%',
     borderRadius: 50,
     borderWidth: 3,
     borderColor: '#DCD5D2',
@@ -52,7 +62,7 @@ export default StyleSheet.create({
     alignSelf: 'center',
     borderRadius: 20,
     paddingBottom: '5%',
-    top: '10%'
+    top: '5%'
 
   },
   login_buttonText:{
@@ -105,32 +115,32 @@ export default StyleSheet.create({
     color: '#fff'
   },
    //menu
-   icon_menu:{
-    width: '50%',
-    height: '70%',
-    left: '20%',
-    top: '28%',
-    flex: 1,
-    flexDirection: 'row',
+  icon_menu:{
+   width: '50%',
+   height: '70%',
+   left: '20%',
+   top: '28%',
+   flex: 1,
+   flexDirection: 'row',
   },
   itemMenuHome:{
-    right: '90%'
+    right: '90%',
   },
   itemMenuList:{
-    right: '80%'
+    right: '80%',
   },
   itemMenuMais:{
     top: '-45%',
     alignSelf: 'center',
-    right: '65%'
+    right: '65%',
   },
   itemMenuDica:{
-    right: '60%',
-    top: "-3%"
+    right: '50%',
+    top: "-5%",
   },
   itemMenuConfig:{
     right: '40%',
-    top: "-3%"
+    top: "-3%",
   },
   //home
   cabecalho:{
@@ -144,7 +154,7 @@ export default StyleSheet.create({
     fontSize: 35,
     color: 'black',
     fontWeight: "bold",
-    left: '20%'
+    left: '5%'
   },
   quadrados:{
     flex: 1,
@@ -189,7 +199,7 @@ export default StyleSheet.create({
     width: '80%',
     height: '40%',
     left: '5%',
-    top: '5%',
+    top: '3%',
     flex: 1,
     alignItems: 'center',
     fontWeight: "bold"
@@ -200,7 +210,6 @@ export default StyleSheet.create({
     fontSize: 13,
     color: 'black',
     left: '5%',
-    top: '10%',
     alignItems: 'center',
   },
  
@@ -209,27 +218,26 @@ export default StyleSheet.create({
   cabecalhoList:{
     flex: 1,
     width: '60%',
-    height: '15%',
+    left: '10%',
     top: '5%',
   },
   histSintomas:{
     flex:1,
     backgroundColor: "#C4C4C4",
     height: '100%',
-    paddingBottom: '80%',
+    paddingBottom: '70%',
     borderRadius: 50,
   },
   histTexSintomas:{
     fontSize: 20,
     color: 'black',
-    width: '70%',
+    width: '100%',
     height: '1000%',
-    left: '15%',
-    top: '25%',
+    left: '10%',
+    top: '30%',
     flex: 1,
     alignItems: 'center',
     fontWeight: "bold",
-  
   },
   
   descriptionHistSintomas:{
@@ -237,7 +245,7 @@ export default StyleSheet.create({
     fontSize: 15,
     color: 'black',
     left: '15%',
-    top: '28%',
+    top: '30%',
     alignItems: 'center',
   },  
 
@@ -247,7 +255,7 @@ export default StyleSheet.create({
     backgroundColor: '#c4c4c4',
     borderRadius: 30,
     width: '100%',
-    paddingBottom: '80%',
+    paddingBottom: '70%',
   },
   DicasButton1:{
     flex: 1,
@@ -269,17 +277,17 @@ export default StyleSheet.create({
   
   TitleDicas:{
     fontSize: 20,
-    right: '5%',
+    left: '5%',
     color: 'black',
     top: '50%',
     fontWeight: "bold",
   },
   descriptionDicas:{
-    flex: 1,
+    width: '90%',
     color: 'black',
     fontSize: 15,
     top: '40%',
-    right: '5%',    
+    left: '5%',    
   },
 
   //config
@@ -291,28 +299,27 @@ export default StyleSheet.create({
   },
   inf:{
     flex: 1,
-    flexDirection: 'row-reverse',
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    right: '15%',
+    left: '5%',
     top: '15%'
   },
   nameUser:{
     fontSize: 25,
     fontWeight: 'bold',
-    right: '5%',
+    left: '50%',
   },
   emailUser:{
     fontSize: 15,
-    right: '390%',
+    right: '350%',
     top: '5%'
   },
   buttonSair:{
     right: '120%'
   },
   notificacao:{
-    flex: 1,
-    flexDirection: 'row-reverse',
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     top: '25%'
@@ -320,79 +327,76 @@ export default StyleSheet.create({
   titleNotificacao:{
     fontSize: 25,
     fontWeight: 'bold',
-    right: '-35%',
+    left: '15%',
   },
   descriptionNotificacao:{
     fontSize: 15,
-    right: '280%',
+    right: '230%',
     top: '7%'
   },
   buttonNotificacao:{
-    right: '60%'
+    right: '95%'
   },
   modoEscuro:{
     flex: 1,
-    flexDirection: 'row-reverse',
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     top: '35%'
   },
   descriptionModo:{
     fontSize: 15,
-    right: '290%',
+    right: '300%',
     top: '8%',
     width: '60%'
   },
   buttonModoEscuro:{
-    right: '120%'
+    right: '150%'
   },
   SobreApp:{
     flex: 1,
-    flexDirection: 'row-reverse',
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     top: '50%'
   },
   buttonApp:{
     flex: 1,
-    flexDirection: 'row-reverse',
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    top: '20%'
+    top: '40%',
   },
   descriptionApp:{
     fontSize: 15,
-    right: '270%',
+    right: '260%',
     top: '8%',
   },
   //Questionario
   ContainerList:{
     flex: 1,
     paddingHorizontal: '2%',
-    paddingTop: Constants.statusBarHeight + 10,
     backgroundColor: '#007D46',
     borderRadius: 50,
-    top: '5%'
   },
   TextTitleList:{
     color: '#fff',
     fontSize: 40,
-    right: '20%'
+    top: '2%'
   },
   descriptionList:{
     color: "#fff",
     fontSize: 20,
-    top: '5%',
-    right: '5%'
+    top:'2%'
   },
   form_quest:{
     width:"100%",
-    height: '75%',
-    padding: '5%',
+    height: '70%',
+    left: '2%',
     top: '5%',
   },
   descriptionSintomas:{
-    right: '15%',
+    left: '10%',
     color:'white',
     fontSize: 20,
     top: '-50%'
@@ -404,7 +408,9 @@ export default StyleSheet.create({
     backgroundColor: "#116530",
     alignSelf: 'center',
     borderRadius: 20,
-    paddingBottom: '5%'
+    paddingBottom: '5%',
+    right: '5%',
+    top: '-3%'
   },
   icon_menu_dicas:{
     flexDirection: 'row'
@@ -415,7 +421,7 @@ export default StyleSheet.create({
     width: '30%',
     height: '40%',
     top: '20%',
-    right: '-140%',
+    left: '150%',
     alignItems: 'center',
     justifyContent: 'center'
   },
@@ -435,7 +441,7 @@ export default StyleSheet.create({
     width: '30%',
     height: '40%',
     top: '20%',
-    right: '120%',
+    right: '130%',
     alignItems: 'center',
     justifyContent: 'center'
   },
@@ -449,70 +455,62 @@ export default StyleSheet.create({
     left: '5%'
   },
   descriptionFone:{
-    flex: 1,
     fontSize: 20,
     color: 'black',
-    right: '5%',
+    left: '5%',
     top: '25%',
     alignItems: 'center',
     fontWeight: 'bold'
   },
   descriptionFone1:{
-    flex: 1,
     fontSize: 20,
     color: 'black',
-    right: '5%',
+    left: '5%',
     top: '35%',
     alignItems: 'center',
     fontWeight: 'bold'
   },
   descriptionFone2:{
-    flex: 1,
     fontSize: 20,
     color: 'black',
-    right: '5%',
+    left: '5%',
     top: '45%',
     alignItems: 'center',
     fontWeight: 'bold'
   },
   descriptionFone3:{
-    flex: 1,
     fontSize: 20,
     color: 'black',
-    right: '5%',
+    left: '5%',
     top: '55%',
     alignItems: 'center',
     fontWeight: 'bold'
   },
   descriptionPhoneText1:{
-    flex: 1,
     fontSize: 15,
     color: 'black',
-    right: '5%',
+    left: '5%',
     top: '28%',
     alignItems: 'center',
   },
   descriptionPhoneText2:{
-    flex: 1,
     fontSize: 15,
     color: 'black',
-    right: '5%',
+    left: '5%',
     top: '36%',
     alignItems: 'center',
   },
   descriptionPhoneText3:{
-    flex: 1,
     fontSize: 15,
     color: 'black',
-    right: '5%',
+    left: '5%',
     top: '48%',
     alignItems: 'center',
   },
   descriptionPhoneText4:{
-    flex: 1,
     fontSize: 15,
     color: 'black',
-    right: '5%',
+    left: '5%',
     top: '58%',
     alignItems: 'center',
   },
@@ -522,12 +520,12 @@ export default StyleSheet.create({
     color: "#fff"
   },
   QuestCheck1:{
-    right: '5%',
-    top: '3.5%'
+    left: '15%',
+    top: '-5%'
   },
   QuestCheck2:{
-    right: '40%',
-    top: '-5%',
+    left: '50%',
+    top: '5%',
     color: 'red'
   },
 

@@ -28,7 +28,7 @@ export default function Configuracao ({navigation}){
                 <Text style={styles.titleNotificacao}>Notificações</Text>
                 <Text style={styles.descriptionNotificacao}>Receber notificações importantes</Text>
                 <TouchableOpacity style={styles.buttonNotificacao}>
-                    <Icon name='toggle-on' size={50} color="black"/ >
+                    <Icon name='toggle-on' size={50} color="black" />
                 </TouchableOpacity>
             </View>
 
@@ -38,7 +38,7 @@ export default function Configuracao ({navigation}){
                     Troca as cores para tons escuros e predominantemente preto
                 </Text>
                 <TouchableOpacity style={styles.buttonModoEscuro}>
-                    <Icon name='toggle-on' size={50} color="black"/ >
+                    <Icon name='toggle-on' size={50} color="black" />
                 </TouchableOpacity>
             </View>
 

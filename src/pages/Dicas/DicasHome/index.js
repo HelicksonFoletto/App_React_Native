@@ -23,7 +23,7 @@ export default function DicasHome ({navigation}){
                     </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.DicasButton2}>
+                <TouchableOpacity style={styles.DicasButton2} onPress={() => navigation.navigate('DicasCriadouros')}>
                     <Text style={styles.TitleDicas}>
                         Criadouro
                     </Text>
@@ -32,7 +32,7 @@ export default function DicasHome ({navigation}){
                     </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.DicasButton3}>
+                <TouchableOpacity style={styles.DicasButton3} onPress={() => navigation.navigate('DicasCuidado')}>
                     <Text style={styles.TitleDicas}>
                         Cuidados
                     </Text>
@@ -41,7 +41,7 @@ export default function DicasHome ({navigation}){
                     </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.DicasButton4}>
+                <TouchableOpacity style={styles.DicasButton4} onPress={() => navigation.navigate('DicasContrai')}>
                     <Text style={styles.TitleDicas}>
                         Contrai a dengue, e agora?
                     </Text>

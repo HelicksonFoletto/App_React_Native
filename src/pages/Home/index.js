@@ -13,13 +13,13 @@ export default function Home ({navigation}){
         <View  style={styles.ContainerCadastro}>
 
             <View style={styles.cabecalho}> 
-                <Text style={styles.text}>Bom dia, Fulano</Text>
+                <Text style={styles.text}>Bom dia, Fulano </Text>
                 <Icon name='user' size={80} color="black"/>
                
             </View>
             
             <View style={styles.quadrados}>
-            <View style={styles.quadrado2}>
+                <View style={styles.quadrado2}>
                     <Text style={styles.title}>Use Máscara</Text>
                     <Text style={styles.description}>
                         A máscara protege você e quem está próximo, do novo Coronavírus
@@ -30,9 +30,7 @@ export default function Home ({navigation}){
                     <Text style={styles.description}>
                         O clima está seco Manter-se hidratado é fundamental para o bom funcionamentodo seu organismo 
                     </Text>
-                </View>
-
-                
+                </View>                
             </View>
 
             <View style={styles.hist}>
