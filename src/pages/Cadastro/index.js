@@ -3,14 +3,13 @@ import { View,
     Image, 
     Text,
     TextInput,
-    Button,
+    TouchableOpacity
 } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import styles from '../../assets/Css';
-import Login from '../Login';
 
-export default function Cadastro ({navigation, propos}){
+
+export default function Cadastro ({navigation}){
     return(
         <View style={styles.ContainerCadastro}>
             

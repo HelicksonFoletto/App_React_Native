@@ -1,19 +1,22 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { View, 
     Text, 
     TouchableOpacity,
 } from 'react-native';
-
 import Icon  from 'react-native-vector-icons/FontAwesome';
+import styles from '../../assets/Css';
 
-import styles from '../../assets/Css'
+import AuthContext  from '../../contexts/auth';
 
 export default function Home ({navigation}){
+    
+    const { signed, user } = useContext(AuthContext);
+    
     return(
         <View  style={styles.ContainerCadastro}>
 
             <View style={styles.cabecalho}> 
-                <Text style={styles.text}>Bom dia, Fulano </Text>
+                <Text style={styles.text}>Olá, {user?.name}</Text>
                 <Icon name='user' size={80} color="black"/>
                
             </View>

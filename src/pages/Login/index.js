@@ -1,4 +1,4 @@
-import React, {useState, useEffect}from 'react';
+import React, { useContext } from 'react';
 import {KeyboardAvoidingView,
     View, 
     TouchableOpacity, 
@@ -7,23 +7,19 @@ import {KeyboardAvoidingView,
     Text,
     Platform,
 } from 'react-native';
+import AuthContext from '../../contexts/auth';
 
 
 import styles from '../../assets/Css';
 
-export default function Login({navigation, propos}){
-    //const [display, setDisplay] = useState('none')
+export default function Login({navigation}){
+    const { signed, signIn } = useContext(AuthContext);
+    
+    console.log(signed)
 
-    //const [ values, setValues] =  useState(initialState);
-
-    //function onChange(event){
-    //    const {value, name} = event.target;
-
-    //    setValues({
-    //        ...values,
-    //        [name]: value,
-     //   });
-    //}
+    function handleSignIn(){
+        signIn();
+    }
 
     return(
         
@@ -44,14 +40,9 @@ export default function Login({navigation, propos}){
                 <TextInput
                     style={styles.login_input}
                     placeholder="E-mail ou usuário:"
-                    //name='user'
-                    //id='user'
-                    //onChange={onChange} value={values.user}
                 />
                 <TextInput 
                     style={styles.login_input}
-                    //id='passoword' 
-                    //name='password'
                     placeholder='Senha:' 
                     secureTextEntry={true}
                 />
@@ -61,7 +52,7 @@ export default function Login({navigation, propos}){
                     </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.login_button} onPress={() => navigation.navigate('Home')}>
+                <TouchableOpacity style={styles.login_button} onPress={handleSignIn}>
                     <Text style={styles.login_buttonText}>Entrar</Text>
                 </TouchableOpacity>
                

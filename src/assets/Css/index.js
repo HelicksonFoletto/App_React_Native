@@ -535,4 +535,12 @@ export default StyleSheet.create({
     margin: '5%',
     fontSize: 20
   },
+
+  //Teste
+
+  loading: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });
