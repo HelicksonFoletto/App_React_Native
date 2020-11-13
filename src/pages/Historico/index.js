@@ -1,14 +1,19 @@
 import React from 'react';
-import { View, Text, TouchableOpacity} from 'react-native';
+import { View,
+    Text,
+    TouchableOpacity,
+    FlatList,
+} from 'react-native';
 import styles from '../../assets/Css'
 import Icon  from 'react-native-vector-icons/FontAwesome';
 
 export default function Historico ({navigation}){
+
     return(
         <View style={styles.ContainerCadastro}>
 
             <View style={styles.cabecalhoList}> 
-                <Text style={styles.text}>Suas Listas</Text> 
+            <Text style={styles.text}>Suas Listas</Text> 
                
             </View>
 

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import {KeyboardAvoidingView,
     View, 
     TouchableOpacity, 
@@ -6,19 +6,36 @@ import {KeyboardAvoidingView,
     TextInput, 
     Text,
     Platform,
+    Alert
 } from 'react-native';
-import AuthContext from '../../contexts/auth';
-
+import firebase from '../../services/Firebase';
 
 import styles from '../../assets/Css';
 
-export default function Login({navigation}){
-    const { signed, signIn } = useContext(AuthContext);
+function Login({navigation}){
     
-    console.log(signed)
+    function navegarSucess(){
+        navigation.navigate('Home')
+    }
+    function navegarFailed(){
+        Alert.alert('Usuário ou senha invalido!','Por favor tente novamente.')
+    }
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
-    function handleSignIn(){
-        signIn();
+
+    const onChangeEmail = (txtEmail) => {
+        setEmail(txtEmail)
+    }
+    const onChangePassword = (txtPassword) =>{
+        setPassword(txtPassword)
+    }
+    const login = () =>{
+        firebase.auth().signInWithEmailAndPassword(email,password).then(()=>{
+            navegarSucess()
+        }).catch(()=>{
+            navegarFailed()
+        })
     }
 
     return(
@@ -31,20 +48,21 @@ export default function Login({navigation}){
                 <View style={styles.logo_marca_home}>
                     <Image source={require('../../assets/Imagens/logo_marca.png')}/>
                 </View>
-                 
-                <View>
-                    <Text style={styles.login__msg()}>Usuário ou senha inválidos!</Text> 
-                </View>
+                
 
             <View style={styles.login_form}>   
                 <TextInput
                     style={styles.login_input}
-                    placeholder="E-mail ou usuário:"
+                    placeholder="Digite seu e-mail:"
+                    value={email}
+                    onChangeText={txtEmail => onChangeEmail(txtEmail)}
                 />
-                <TextInput 
-                    style={styles.login_input}
-                    placeholder='Senha:' 
+                <TextInput
+                   style={styles.login_input}
+                   placeholder="Digite sua senha:" 
                     secureTextEntry={true}
+                    value={password}
+                    onChangeText={txtPassword => onChangePassword(txtPassword)}
                 />
                 <TouchableOpacity onPress={() => {}}>
                     <Text style={styles.ButtonEsqueci} >
@@ -52,7 +70,7 @@ export default function Login({navigation}){
                     </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.login_button} onPress={handleSignIn}>
+                <TouchableOpacity style={styles.login_button} onPress={login}>
                     <Text style={styles.login_buttonText}>Entrar</Text>
                 </TouchableOpacity>
                
@@ -61,11 +79,10 @@ export default function Login({navigation}){
                         Novo por aqui? Cadastre-se
                     </Text>
                 </TouchableOpacity>
-            </View> 
-
-            
+            </View>             
         </View>
     </KeyboardAvoidingView>
 
     );
 }
+export default Login;

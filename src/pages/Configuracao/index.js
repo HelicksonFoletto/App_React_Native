@@ -2,16 +2,11 @@ import React,{useContext} from 'react';
 import { View, Text, TouchableOpacity} from 'react-native';
 import Icon  from 'react-native-vector-icons/FontAwesome';
 
-import AuthContext from '../../contexts/auth';
-
 import styles from '../../assets/Css';
 
 export default function Configuracao ({navigation}){
-    const { signed, user, signOut } = useContext(AuthContext);
     
-    function handleSignOut(){
-        signOut();
-    }
+   
     return(
         <View style={styles.ContainerCadastro}>
 
@@ -23,9 +18,9 @@ export default function Configuracao ({navigation}){
         <View style={styles.buttonDicas}>
             <View style={styles.inf}>
                 <Icon name='user' size={80} color="black"/>
-                <Text style={styles.nameUser}> { user.name} </Text>
-                <Text style={styles.emailUser}> {user.email}  </Text>
-                <TouchableOpacity style={styles.buttonSair} onPress={handleSignOut}>
+                <Text style={styles.nameUser}> Fulano </Text>
+                <Text style={styles.emailUser}> fulano@gmail.com </Text>
+                <TouchableOpacity style={styles.buttonSair} onPress={() => navigation.navigate('Login')}>
                     <Icon name="power-off" size={40} color="black"/>
                 </TouchableOpacity>
                 

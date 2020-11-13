@@ -6,17 +6,13 @@ import { View,
 import Icon  from 'react-native-vector-icons/FontAwesome';
 import styles from '../../assets/Css';
 
-import AuthContext  from '../../contexts/auth';
-
 export default function Home ({navigation}){
-    
-    const { signed, user } = useContext(AuthContext);
     
     return(
         <View  style={styles.ContainerCadastro}>
 
             <View style={styles.cabecalho}> 
-                <Text style={styles.text}>Olá, {user?.name}</Text>
+                <Text style={styles.text}>Olá, Fulano</Text>
                 <Icon name='user' size={80} color="black"/>
                
             </View>
