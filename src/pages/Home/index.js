@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import { View, 
     Text, 
     TouchableOpacity,
@@ -7,12 +7,13 @@ import Icon  from 'react-native-vector-icons/FontAwesome';
 import styles from '../../assets/Css';
 
 export default function Home ({navigation}){
-    
+
     return(
         <View  style={styles.ContainerCadastro}>
 
             <View style={styles.cabecalho}> 
-                <Text style={styles.text}>Olá, Fulano</Text>
+                 
+                <Text style={styles.text}>Olá, Helickson </Text>           
                 <Icon name='user' size={80} color="black"/>
                
             </View>

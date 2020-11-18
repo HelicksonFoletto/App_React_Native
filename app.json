@@ -17,6 +17,11 @@
       "**/*"
     ],
     "android": {
+      "config":{
+        "googleMaps":{
+          "apiKey": "AIzaSyCFP4BkzWpmP9tYgfxOF8OV4Yowc7QHLGM"
+        }
+      },
       "package": "com.udc.fozcontradengue",
       "versionCode": 1
     }
