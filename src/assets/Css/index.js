@@ -8,7 +8,6 @@ export default StyleSheet.create({
   proxScreen: {
     left: "80%",
     top: "10%",
-    backgroundColor: "black",
   },
   containerLogin: {
     flex: 1,
@@ -31,7 +30,6 @@ export default StyleSheet.create({
     marginBottom: 50,
     left: "15%",
     top: "90%",
-    //backgroundColor: 'black'
   },
   logo_marca_home: {
     paddingTop: 30,
@@ -326,7 +324,6 @@ export default StyleSheet.create({
   },
   buttonSair: {
     right: "80%",
-    backgroundColor: "#c4c4",
   },
   notificacao: {
     flexDirection: "row",
@@ -348,8 +345,6 @@ export default StyleSheet.create({
   },
   buttonNotificacao: {
     right: "50%",
-    //top: "13%",
-    backgroundColor: "#c4c4",
   },
   modoEscuro: {
     flex: 1,
@@ -368,8 +363,6 @@ export default StyleSheet.create({
   },
   buttonModoEscuro: {
     right: "220%",
-    //top: "10%",
-    backgroundColor: "#c4c4",
   },
   SobreApp: {
     flex: 1,
@@ -386,7 +379,6 @@ export default StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     top: "40%",
-    backgroundColor: "#c4c4",
   },
   descriptionApp: {
     fontSize: 15,
