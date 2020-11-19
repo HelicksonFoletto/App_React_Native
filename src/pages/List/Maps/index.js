@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { View } from "react-native";
-import * as Location from "expo-location";
+import {getCurrentPositionAsync,
+requestPermissionsAsync} from "expo-location";
 import MapView, { Marker } from "react-native-maps";
 
 import styles from "../../../assets/Css";
@@ -17,11 +18,12 @@ export default function Maps({ navigation }) {
 
   useEffect(() => {
     const getPosition = async () => {
-      let { status } = await Location.requestPermissionsAsync();
+      let { status } = await requestPermissionsAsync();
+
       if (status !== "granted") {
         setErrorMsg("Permission to access location was denied");
       }
-      let location = await Location.getCurrentPositionAsync({});
+      let location = await getCurrentPositionAsync({});
       setLocation(location.coords);
 
       console.log(location);
