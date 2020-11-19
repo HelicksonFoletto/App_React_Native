@@ -7,7 +7,7 @@ export default function Home({ navigation }) {
   return (
     <View style={styles.ContainerCadastro}>
       <View style={styles.cabecalho}>
-        <Text style={styles.text}>Olá, como está se sentindo hoje? </Text>
+        <Text style={styles.text}>Olá, como está sentindo hoje? </Text>
         <Icon name="user" size={80} color="black" />
       </View>
 

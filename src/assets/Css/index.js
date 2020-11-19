@@ -3,28 +3,20 @@ import Constants from "expo-constants";
 
 export default StyleSheet.create({
   ImagemBemvindo: {
-    flex: 1,
-    width: "80%",
+    width: "70%",
+  },
+  proxScreen: {
     left: "80%",
-    top: "-90%",
-    //alignContent: 'space-between',
+    top: "10%",
     backgroundColor: "black",
   },
-
   containerLogin: {
     flex: 1,
     paddingHorizontal: "2%",
     paddingTop: Constants.statusBarHeight,
     backgroundColor: "#259F71",
   },
-  login__msg: (text = "none") => ({
-    fontWeight: "bold",
-    fontSize: 22,
-    color: "red",
-    marginTop: 10,
-    marginBottom: 15,
-    display: text,
-  }),
+
   ButtonEsqueci: {
     fontSize: 17,
     color: "black",
@@ -87,6 +79,7 @@ export default StyleSheet.create({
     fontSize: 30,
     color: "green",
     fontWeight: "bold",
+    alignSelf: "center",
     padding: "3%",
   },
   formCadastro: {
@@ -154,13 +147,14 @@ export default StyleSheet.create({
     flexDirection: "row",
     alignSelf: "center",
     padding: "5%",
+    right: "5%",
     marginTop: "20%",
   },
   text: {
     fontSize: 35,
     color: "black",
     fontWeight: "bold",
-    left: "5%",
+    left: "45%",
   },
   quadrados: {
     flex: 1,
@@ -231,6 +225,8 @@ export default StyleSheet.create({
     height: "100%",
     paddingBottom: "70%",
     borderRadius: 50,
+    borderBottomWidth: 3,
+    borderColor: "green",
   },
   histTexSintomas: {
     fontSize: 20,
@@ -263,27 +259,35 @@ export default StyleSheet.create({
   },
   DicasButton1: {
     flex: 1,
-    top: "20%",
+    top: "15%",
+    borderBottomWidth: 3,
+    borderColor: "green",
   },
 
   DicasButton2: {
     flex: 1,
-    top: "40%",
+    top: "50%",
+    borderBottomWidth: 3,
+    borderColor: "green",
   },
   DicasButton3: {
     flex: 1,
-    top: "60%",
+    top: "80%",
+    borderBottomWidth: 3,
+    borderColor: "green",
   },
   DicasButton4: {
     flex: 1,
-    top: "80%",
+    top: "110%",
+    borderBottomWidth: 3,
+    borderColor: "green",
   },
 
   TitleDicas: {
     fontSize: 20,
     left: "5%",
     color: "black",
-    top: "50%",
+    top: "35%",
     fontWeight: "bold",
   },
   descriptionDicas: {
@@ -307,62 +311,74 @@ export default StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     left: "5%",
-    top: "15%",
+    top: "10%",
+    borderBottomWidth: 3,
+    borderColor: "green",
   },
-  nameUser: {
+  titleSair: {
     fontSize: 25,
     fontWeight: "bold",
-    left: "50%",
   },
-  emailUser: {
+  titleDescription: {
     fontSize: 15,
-    right: "350%",
-    top: "5%",
+    right: "200%",
+    top: "10%",
   },
   buttonSair: {
-    right: "120%",
+    right: "80%",
+    backgroundColor: "#c4c4",
   },
   notificacao: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
     top: "25%",
+    borderBottomWidth: 3,
+    borderColor: "green",
   },
   titleNotificacao: {
     fontSize: 25,
     fontWeight: "bold",
-    left: "15%",
+    left: "25%",
   },
   descriptionNotificacao: {
     fontSize: 15,
-    right: "230%",
-    top: "7%",
+    right: "200%",
+    top: "10%",
   },
   buttonNotificacao: {
-    right: "95%",
+    right: "50%",
+    //top: "13%",
+    backgroundColor: "#c4c4",
   },
   modoEscuro: {
     flex: 1,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    top: "35%",
+    top: "40%",
+    borderBottomWidth: 3,
+    borderColor: "green",
   },
   descriptionModo: {
     fontSize: 15,
-    right: "300%",
-    top: "8%",
-    width: "60%",
+    right: "330%",
+    top: "10%",
+    width: "70%",
   },
   buttonModoEscuro: {
-    right: "150%",
+    right: "220%",
+    //top: "10%",
+    backgroundColor: "#c4c4",
   },
   SobreApp: {
     flex: 1,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    top: "50%",
+    top: "60%",
+    borderBottomWidth: 3,
+    borderColor: "green",
   },
   buttonApp: {
     flex: 1,
@@ -370,11 +386,12 @@ export default StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     top: "40%",
+    backgroundColor: "#c4c4",
   },
   descriptionApp: {
     fontSize: 15,
-    right: "260%",
-    top: "8%",
+    right: "300%",
+    top: "10%",
   },
   //Questionario
   ContainerList: {
