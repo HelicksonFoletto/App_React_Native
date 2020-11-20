@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import styles from "../../../assets/Css";
-
-import Constants from "expo-constants";
-import * as Location from "expo-location";
+import TaskList from "../../../components/TaskList";
 
 export default function QuestionarioHome({ navigation }) {
   return (
@@ -17,97 +15,33 @@ export default function QuestionarioHome({ navigation }) {
         </Text>
 
         <View style={styles.form_quest}>
-          <TouchableOpacity style={styles.check1}>
-            <Icon
-              name="check-square"
-              size={20}
-              color="white"
-              onPress={() => {}}
-            />
-            <Text style={styles.descriptionSintomas}>Cansaço Extremo</Text>
-          </TouchableOpacity>
+          <TaskList />
+          <Text style={styles.descriptionSintomas}> Cansoço Extremo</Text>
 
-          <TouchableOpacity style={styles.check1}>
-            <Icon
-              name="check-square"
-              size={20}
-              color="white"
-              onPress={() => {}}
-            />
-            <Text style={styles.descriptionSintomas}> Dor Abdominal</Text>
-          </TouchableOpacity>
+          <TaskList />
+          <Text style={styles.descriptionSintomas}> Dor Abdominal</Text>
 
-          <TouchableOpacity style={styles.check1}>
-            <Icon
-              name="check-square"
-              size={20}
-              color="white"
-              onPress={() => {}}
-            />
-            <Text style={styles.descriptionSintomas}> Dor de cabeça</Text>
-          </TouchableOpacity>
+          <TaskList />
+          <Text style={styles.descriptionSintomas}> Dor de cabeça</Text>
+          <TaskList />
+          <Text style={styles.descriptionSintomas}>Dor nos olhos</Text>
+          <TaskList />
+          <Text style={styles.descriptionSintomas}> Enjoo e vômito</Text>
+          <TaskList />
+          <Text style={styles.descriptionSintomas}> Febre Alta</Text>
+          <TaskList />
+          <Text style={styles.descriptionSintomas}> Mal-Estar</Text>
 
-          <TouchableOpacity style={styles.check1}>
-            <Icon
-              name="check-square"
-              size={20}
-              color="white"
-              onPress={() => {}}
-            />
-            <Text style={styles.descriptionSintomas}> Dor nos olhos</Text>
-          </TouchableOpacity>
+          <TaskList />
+          <Text style={styles.descriptionSintomas}> Manchas na Pele</Text>
 
-          <TouchableOpacity style={styles.check1}>
-            <Icon
-              name="check-square"
-              size={20}
-              color="white"
-              onPress={() => {}}
-            />
-            <Text style={styles.descriptionSintomas}> Enjoo e vômito</Text>
-          </TouchableOpacity>
+          <TaskList />
+          <Text style={styles.descriptionSintomas}> Estou Bem!</Text>
 
-          <TouchableOpacity style={styles.check1}>
-            <Icon
-              name="check-square"
-              size={20}
-              color="white"
-              onPress={() => {}}
-            />
-            <Text style={styles.descriptionSintomas}>Febre Alta</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.check1}>
-            <Icon
-              name="check-square"
-              size={20}
-              color="white"
-              onPress={() => {}}
-            />
-            <Text style={styles.descriptionSintomas}> Mal-Estar</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.check1}>
-            <Icon
-              name="check-square"
-              size={20}
-              color="white"
-              onPress={() => {}}
-            />
-            <Text style={styles.descriptionSintomas}> Manchas na Pele</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.check1}>
-            <Icon
-              name="check-square"
-              size={20}
-              color="white"
-              onPress={() => {}}
-            />
-            <Text style={styles.descriptionSintomas}> Estou bem!</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.SaveButton} onPress={() => {}}>
+          <TouchableOpacity
+            style={styles.SaveButton}
+            onPress={() => navigation.navigate("ListHome")}
+          >
             <Text style={styles.cadastro_textButton}> Salvar </Text>
           </TouchableOpacity>
         </View>

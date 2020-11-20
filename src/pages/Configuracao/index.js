@@ -1,5 +1,11 @@
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
+import {
+  Ionicons,
+  MaterialCommunityIcons,
+  AntDesign,
+  Entypo,
+} from "@expo/vector-icons";
 import Icon from "react-native-vector-icons/FontAwesome";
 
 import styles from "../../assets/Css";
@@ -13,16 +19,14 @@ export default function Configuracao({ navigation }) {
 
       <View style={styles.buttonDicas}>
         <View style={styles.inf}>
-          <Text style={styles.titleSair}> Sair </Text>
-          <Text style={styles.titleDescription}>
-            {" "}
-            Deseja deslogar deste aplicativo?{" "}
-          </Text>
+          <Icon name="user-secret" size={50} color="black" />
+          <Text style={styles.titleSair}> User </Text>
+          <Text style={styles.titleDescription}> user@gmail.com </Text>
           <TouchableOpacity
             style={styles.buttonSair}
             onPress={() => navigation.navigate("Login")}
           >
-            <Icon name="power-off" size={40} color="green" />
+            <MaterialCommunityIcons name="logout" size={40} color="black" />
           </TouchableOpacity>
         </View>
 
@@ -32,7 +36,7 @@ export default function Configuracao({ navigation }) {
             Receber notificações importantes
           </Text>
           <TouchableOpacity style={styles.buttonNotificacao}>
-            <Icon name="toggle-on" size={50} color="green" />
+            <Icon name="toggle-on" size={35} color="black" />
           </TouchableOpacity>
         </View>
 
@@ -42,7 +46,7 @@ export default function Configuracao({ navigation }) {
             Troca as cores para tons escuros e predominantemente preto
           </Text>
           <TouchableOpacity style={styles.buttonModoEscuro}>
-            <Icon name="toggle-on" size={50} color="green" />
+            <Icon name="toggle-on" size={35} color="black" />
           </TouchableOpacity>
         </View>
 
@@ -56,11 +60,12 @@ export default function Configuracao({ navigation }) {
         </View>
       </View>
 
+      <View style={styles.barra}></View>
       <View style={styles.icon_menu}>
         <TouchableOpacity style={styles.itemMenuHome}>
-          <Icon
+          <Entypo
             name="home"
-            size={50}
+            size={40}
             color="black"
             onPress={() => navigation.navigate("Home")}
           />
@@ -70,28 +75,28 @@ export default function Configuracao({ navigation }) {
           style={styles.itemMenuList}
           onPress={() => navigation.navigate("Historico")}
         >
-          <Icon name="list" size={50} color="black" />
+          <Icon name="list" size={40} color="black" />
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.itemMenuMais}
           onPress={() => navigation.navigate("ListHome")}
         >
-          <Icon name="plus-circle" size={100} color="green" />
+          <Ionicons name="ios-add" size={70} color="white" />
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.itemMenuDica}
           onPress={() => navigation.navigate("DicasHome")}
         >
-          <Icon name="comment" size={50} color="black" />
+          <AntDesign name="bulb1" size={40} color="black" />
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.itemMenuConfig}
           onPress={() => navigation.navigate("Config")}
         >
-          <Icon name="cog" size={50} color="black" />
+          <AntDesign name="setting" size={40} color="black" />
         </TouchableOpacity>
       </View>
     </View>

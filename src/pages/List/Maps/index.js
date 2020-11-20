@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { View } from "react-native";
-import {getCurrentPositionAsync,
-requestPermissionsAsync} from "expo-location";
+import {
+  getCurrentPositionAsync,
+  requestPermissionsAsync,
+} from "expo-location";
 import MapView, { Marker } from "react-native-maps";
 
 import styles from "../../../assets/Css";
@@ -62,7 +64,7 @@ export default function Maps({ navigation }) {
               description={place.turnoAtendimento}
               icon={{
                 uri:
-                  "https://img.icons8.com/plasticine/100/000000/medical-doctor.png",
+                  "https://img.icons8.com/fluent-systems-filled/50/000000/hospital-3.png",
               }}
             />
           );
